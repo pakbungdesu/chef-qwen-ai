@@ -1,70 +1,55 @@
-# Getting Started with Create React App
+# 🍳 Chef Qwen AI — Smart Recipe Generator
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Chef Qwen AI is a React web application that uses artificial intelligence to generate custom, step-by-step recipes based on whatever ingredients the user has on hand. Built with React and powered by the Hugging Face Serverless Inference API.
 
-## Available Scripts
+## ✨ Features
+* **Ingredient Tracker:** Add ingredients dynamically to a list.
+* **Smart UI States:** Button includes smooth interactive hover/active scales, changing into a non-clickable gray loading element while fetching the AI payload.
+* **AI Recipe Generation:** Connects directly to Hugging Face models to compile recipes based on your listed items.
+* **Markdown Support:** Renders beautifully formatted headings, bullet points, and steps using `react-markdown`.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## 🚀 Getting Started
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Follow these steps to set up the project locally on your machine.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 1. Installation
+Clone the repository and install the necessary package dependencies:
+```bash
+npm install
+```
 
-### `npm test`
+### 2. Environment Setup
+You must secure your Hugging Face API token before running the project.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Create a file named `.env` in the root folder of the project (next to `package.json`):
 
-### `npm run build`
+```
+REACT_APP_HF_ACCESS_TOKEN=your_huggingface_token_here
+```
+⚠️ Important: Do not upload your real .env file to GitHub. It is ignored by the system automatically if added to your `.gitignore.`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 3. Running the App
+Start the development server:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```Bash
+npm start
+```
+Open http://localhost:3000 to view your recipe app in the browser.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🛠️ Built With
+- React (Create React App workflow)
 
-### `npm run eject`
+- Hugging Face Inference SDK (`@huggingface/inference`)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- React Markdown (`react-markdown`)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- CSS3 (Custom UI layout and button transitions)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 📦 Available Component Scripts
+`npm start`
+Runs the app in development mode with active reload states.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+`npm run build`
+Builds and minifies the application to a production-ready build folder.
