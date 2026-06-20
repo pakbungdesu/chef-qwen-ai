@@ -8,7 +8,6 @@ Chef Qwen AI is a React web application that uses artificial intelligence to gen
 * **AI Recipe Generation:** Connects directly to Hugging Face models to compile recipes based on your listed items.
 * **Markdown Support:** Renders beautifully formatted headings, bullet points, and steps using `react-markdown`.
 
----
 
 ## 🚀 Getting Started
 
