@@ -9,6 +9,14 @@ export default function Main() {
     )
     const [recipe, setRecipe] = React.useState("")
     const [loading, setLoading] = React.useState(false)
+    const recipeSection = React.useRef(null)
+    
+    React.useEffect(() => {
+        if (recipe !== "" && recipeSection.current !== null) {
+            recipeSection.current.scrollIntoView()
+        }
+    }, [recipe])
+
     async function getRecipe() {
         setLoading(true)
         const recipeMarkdown = await getRecipeFromMistral(ingredients)
@@ -35,6 +43,7 @@ export default function Main() {
 
             {ingredients.length > 0 &&
                 <IngredientsList
+                    ref={recipeSection}
                     ingredients={ingredients}
                     getRecipe={getRecipe}
                     loading={loading}
